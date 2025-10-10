@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsAPI</title>
+</head>
+<body>
+    <select name="cars" id="cars">
+        <option value="everything">Everything</option>
+        <option value="top-headlines">Top-Headlines</option>
+        <option value="sources">Sources</option>
+    </select>
+    <br>
+    <br>
+    <input type="submit" value="Submit" onclick="getNews()">
+
+    <script>
+        function getNews(){
+            const api_key = "fccac941933243c9b6778a3da1e1aaf4";
+
+            const url = ` https://newsdata.io/api/1/latest?apikey=pub_013c35a86aa8497f9734b42cbd03a1a6&q=pizza`;
+            fetch(url)
+            .then(function(response){
+                console.log("news data:",response);
+                if(!response.ok){
+                    throw new Error ("API Error: " +response.statusText);
+                }
+                return response.json();
+            })
+            .then(function(data){
+                console.log("NewsAPI:",data);
+
+                // const values = data
+
+            })
+
+        }
+    </script>
+</body>
+</html>

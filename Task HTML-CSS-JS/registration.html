@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url("assets/BG_image.webp") no-repeat center center/cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: -1;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.25);
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #333;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 12px;
+            font-size: 14px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            accent-color: #007bff;
+            width: 16px;
+            height: 16px;
+        }
+
+        .reg-button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 14px;
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .reg-button:hover {
+            background: linear-gradient(90deg, #0056b3, #00408d);
+            transform: translateY(-2px);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var email = document.getElementById("email").value;
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm_password").value;
+            var phone = document.getElementById("phone").value;
+            var address = document.getElementById("address").value;
+
+            if (email == "" || !email.includes("@")) {
+                alert("Please enter a valid email.");
+                return false;
+            }
+            if (fname == "") {
+                alert("First name cannot be blank.");
+                return false;
+            }
+            if (lname == "") {
+                alert("Last name cannot be blank.");
+                return false;
+            }
+            if (username == "" || username.length < 5) {
+                alert("Username must be at least 5 characters long.");
+                return false;
+            }
+            if (password == "" || password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            if (phone == "" || phone.length != 10 ) {
+                alert("Please enter a valid 10-digit phone number.");
+                return false;
+            }
+            if (address == "") {
+                alert("Address cannot be blank.");
+                return false;
+            }
+            if (!document.getElementById("terms").checked) {
+                alert("You must agree to the terms.");
+                return false;
+            }
+            if (document.getElementById("age").value < 1 || document.getElementById("age").value > 80) {
+                alert("Please enter a valid age between 1 and 120.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="form-container">
+        <form action="login-page.html" onsubmit="return validateForm()">
+            <h1>Registration</h1>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email"   autofocus>
+
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter first name"  >
+
+            <label for="mname">Middle Name</label>
+            <input type="text" id="mname" name="mname" placeholder="Enter middle name">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter last name"  >
+
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Choose a username"  >
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter password"  >
+
+            <label for="password"> Confirm Password</label>
+            <input type="password" id="confirm_password" name="password" placeholder="Confirm password"  >
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="1234567890" pattern="[0-9]{10}"  >
+
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="2" placeholder="Enter your address"></textarea>
+
+            <label>Gender</label>
+            <div class="radio-group">
+                <div><input type="radio" id="male" name="gender" value="Male"><label for="male"> Male</label></div>
+                <div><input type="radio" id="female" name="gender" value="Female"><label for="female"> Female</label>
+                </div>
+                <div><input type="radio" id="other" name="gender" value="Other"><label for="other"> Other</label></div>
+            </div>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob"  >
+
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="1" max="120"  >
+
+            <div class="checkbox-group">
+                <div><input type="checkbox" id="mails" name="mails"><label for="mails"> Receive Mails?</label></div>
+                <div><input type="checkbox" id="terms" name="terms"  ><label for="terms"> I agree to
+                        Terms</label></div>
+            </div>
+
+            <input class="reg-button" type="submit" value="Register Now">
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Animal{
+            sound(){
+                return "some generic sound";
+            }
+        }
+        class Dog extends Animal{
+            sound(){
+                return "woof! woof!";
+            }
+        }
+        class Cat extends Dog{
+            sound(){
+                return "meow meow";
+            }
+        }
+        
+        let animal = new Animal();
+        let dog = new Dog();
+        let cat = new Cat();
+
+        let myanimals = [animal,dog,cat];
+
+        for(let i=0;i<myanimals.length;i++){
+            document.write(myanimals[i].sound()+"<br>");
+        }
+
+        
+    </script>
+</body>
+</html>

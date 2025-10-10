@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Car{
+            brand="TATA";
+            display=()=>{
+                document.write("Car Brand : " +this.brand+"<br>");
+            }
+        }
+        class myClass extends Car{
+            
+            mydata=()=>{
+                document.write("My class method  " );
+            }
+        }
+        var myc = new myClass();
+        myc.display();
+        myc.mydata();
+        document.write("<br>Type of myc : "+typeof(myc));
+        document.write("<br> My brand is : "+myc.brand);
+    </script>
+    
+</body>
+</html>

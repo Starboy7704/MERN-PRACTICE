@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>JS programming</title>
+        <script>
+            const url = 'https://jsonplaceholder.typicode.com/posts';
+            //
+            // fetch(url)
+
+            fetch(url).then(function(res){
+                if(!res.ok){
+                    throw new Error('Error Fetch data: sai');
+                }
+
+                return res.json();
+            })
+
+            .then(function(data){
+                console.log('Data from the API',data);
+            })
+            .catch(function(error){
+                console.error('Hello Error:',error);
+            });
+        </script>
+    </head>
+</html>

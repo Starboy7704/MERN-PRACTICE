@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>CSS3</title>
+        <style>
+            .abc{
+                width: 100px;
+                height: 100px;
+                margin: 50px;
+                background: url("shared_globe.png")no-repeat;
+                position: relative;
+                animation: repeatit 2s linear 1ms infinite alternate;
+            }
+            @keyframes repeatit{
+                from {left:0}
+                to {left:70%}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="abc"></div>
+    </body>
+</html>

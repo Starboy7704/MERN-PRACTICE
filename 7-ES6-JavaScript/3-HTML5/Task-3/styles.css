@@ -1,0 +1,98 @@
+.navbar {
+    text-align: right;
+    padding-right: 10%;
+}
+
+.feedback {
+    text-align: center;
+    padding-top: 20%;
+
+}
+
+.logo {
+    float: left;
+    padding-left: 12%;
+    text-align: left;
+    width: 150px;
+    height: 150px;
+}
+
+.cards {
+    width: 250px;
+    height: 250px;
+}
+
+.header {
+    background-color: antiquewhite;
+    overflow: hidden;  /* clear floats if the element goes extra high*/
+    padding: 10px;
+}
+
+nav {
+    float: right;
+    margin-top: 15px;
+    padding-top: 50px;
+    padding-right: 10%;
+}
+
+nav ul p {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 25px;
+    font-family: cursive;
+}
+
+nav ul li a:hover {
+    color: darkred;
+}
+
+.product-link {
+    text-decoration: none;
+    color: black;
+    font-family: cursive;
+    font-size: large;
+}
+
+.product-link:hover {
+    color: darkred;
+}
+
+p {
+    text-decoration: none;
+    font-family: cursive;
+    font-weight: bolder;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    margin-right: 5px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 65px;
+}

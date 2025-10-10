@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Car{
+            constructor(brand){
+                this.brand=brand;
+            }
+            displaybrand(){
+                document.write("<br> car brand"+this.brand);
+            }
+        }
+        class model extends Car{
+            constructor(brand,model){
+                super(brand);
+                this.model=model;
+            }
+            displaymodel(){
+                document.write("<br> model name"+this.model);
+            }
+        }
+        class variant extends model{
+            constructor(brand,model,variant){
+                super(brand,model);
+                this.variant=variant;
+            }
+            displayvariant(){
+                document.write("<br> variant type"+this.variant);
+            }
+        }
+
+        var mycar = new variant("TATA","safari","xza");
+
+        mycar.displaybrand();
+        mycar.displaymodel();
+        mycar.displayvariant();
+    </script>
+</body

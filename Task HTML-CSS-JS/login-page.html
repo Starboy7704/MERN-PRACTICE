@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: url("assets/BG_image.webp") no-repeat center center/cover;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.55);
+        z-index: -1;
+      }
+
+      .form-container {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 40px;
+        border-radius: 15px;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.25);
+      }
+
+      h1 {
+        font-family: "Montserrat", sans-serif;
+        color: #333;
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      label {
+        display: block;
+        margin-top: 15px;
+        font-weight: 600;
+        font-size: 14px;
+        color: #333;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        margin-top: 6px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 15px;
+        outline: none;
+        transition: all 0.3s ease;
+      }
+
+      input:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+      }
+
+      .login-button {
+        width: 100%;
+        margin-top: 20px;
+        padding: 14px;
+        background: linear-gradient(90deg, #007bff, #0056b3);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .login-button:hover {
+        background: linear-gradient(90deg, #0056b3, #00408d);
+        transform: translateY(-2px);
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+      }
+
+      .extra-links {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+      }
+
+      .extra-links a {
+        text-decoration: none;
+        color: #007bff;
+        transition: color 0.3s ease;
+      }
+
+      .extra-links a:hover {
+        color: #00408d;
+      }
+    </style>
+    <script>
+      function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (username == "") {
+          alert("Username must be filled out.");
+          return false;
+        }
+        if (password == "") {
+          alert("Password must be filled out.");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="form-container">
+      <form action="comingsoon.html" onsubmit="return validateForm()">
+        <h1>Login</h1>
+
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter your username"
+          autofocus
+        />
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+        />
+
+        <input class="login-button" type="submit" value="Login" />
+
+        <div class="extra-links">
+          <p><a href="login-page.html">Forgot Password?</a></p>
+          <p>Don’t have an account? <a href="registration.html">Register</a></p>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
