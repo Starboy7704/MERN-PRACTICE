@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .one{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="hOne" class="">DOM Playground</h1>
+    <img id="image">
+
+
+    <script>
+        // const hOne = document.getElementById("hOne");
+        // console.log(hOne);
+        // const span = document.createElement("span");
+        // span.textContent="Hello ";
+        // hOne.prepend(span);
+
+        const hOne = document.getElementById("hOne");
+        hOne.setAttribute("class","hOne");
+        console.log(hOne.hasAttribute("class"))
+        hOne.removeAttribute("class");
+        console.log(hOne.hasAttribute("class"))
+
+
+        const i = document.getElementById("image");
+        console.log(i);
+        i.setAttribute("alt","image sariga petuu ra badcow");
+        i.setAttribute("src","./What Is Multimedia Technology in Education_….jpeg");
+
+        // hOne.setAttribute("class","one");
+        // hOne.classList.add("one");
+        hOne.classList.toggle("one");
+        // hOne.classList.toggle("one");
+
+
+    </script>
+    
+</body>
+</html>
