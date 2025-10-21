@@ -1,0 +1,73 @@
+/* Container for all description cards */
+.desc-left {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 175px;
+    margin-top: 20px;
+}
+
+/* Individual description card styling */
+.desc-card {
+    margin-top: 25px;
+    margin-left: 50px;
+    width: 300px;
+    height: auto;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 10px;
+    border: solid;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Specific card styles */
+#desc-btn1 {
+    background-color: rgb(247, 213, 219);
+    border-color: rgb(253, 151, 168);
+}
+
+#desc-btn2 {
+    background-color: lavender;
+    color: purple;
+    border-color: purple;
+}
+
+/* Centered image inside card */
+.center-btn {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Inner buttons inside card */
+.inner-btn {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px 0;
+    background: pink;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.inner-btn:hover {
+    background: rgb(255, 182, 193);
+}
+
+/* Optional bounce animation for images */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.bounce-img {
+    animation: bounce 0.5s ease-in-out infinite;
+}
