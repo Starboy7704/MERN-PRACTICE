@@ -21,18 +21,21 @@ function ControlledFromApp(){
         onSubmit={(event)=>handleFormSubmit(event)}>
         
         <input className="bg-white placeholder-gray-400" 
+        onChange={(event)=>setName(event.target.value)}
         type="text"
         value={name}
         placeholder="Enter Name" 
         required />
 
-        <input className="bg-white placeholder-gray-400" 
+        <input onChange={(event)=>setEmail(event.target.value)}
+        className="bg-white placeholder-gray-400" 
         type="email"
         value={email}
         placeholder="Enter Email"
         required />
 
-        <input className="bg-white placeholder-gray-400"
+        <input onChange={(event)=>setAge(event.target.value)}
+        className="bg-white placeholder-gray-400"
         type="text"
         value={age}
         placeholder="Enter your age"
