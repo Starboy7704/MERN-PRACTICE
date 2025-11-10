@@ -1,11 +1,10 @@
-import React from 'react'
 import StatusView from './StatusView'
 
-const App = () => {
+function App(){
   return (
-    <div>
-        <StatusView/>
-    </div>
+    <>
+      <StatusView status="ready" data="wake up B*tch!!"/>
+    </>
   )
 }
 

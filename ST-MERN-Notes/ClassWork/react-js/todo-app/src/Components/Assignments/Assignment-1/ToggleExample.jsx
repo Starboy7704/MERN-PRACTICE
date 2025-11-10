@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Details from "./Details";
 import Extra from "./Extra";
+import ShowMap from "./ShowMap";
 
 function ToggleExample() {
 
@@ -21,7 +22,9 @@ function ToggleExample() {
       {/* toggle show between true/false */}
       <button onClick={() => setShow(s => !s)} className="font-bold">
         {/* the button label also depends on show */}
-        {show ? "Hide" : "Show"} Details
+        {/* {show ? "Hide" : "Show"} Details */}
+        <ShowMap show={show}/>
+        Details
       </button>
 
       {/* if show is true, render the paragraph; otherwise render nothing */}

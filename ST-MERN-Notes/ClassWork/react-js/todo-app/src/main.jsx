@@ -1,8 +1,7 @@
 
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './Components/Assignments/Assignment-4/App'
-// import App1 from './Components/CountDown/App1'
+import App from './Components/Assignments/Assignment-6/Pokemon/App'
 
 
-createRoot(document.getElementById('root')).render( <App />)
+createRoot(document.getElementById('root')).render(<App/>)
