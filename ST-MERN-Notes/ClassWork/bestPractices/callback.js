@@ -10,6 +10,8 @@ function greet(name, callback){
 // The callback function is just another function, but instead of 
 // writing inside greet, you pass it in.
 // function(){}
+
+
 greet("Sundeeep", function(){
     console.log("How are you?");
 })
